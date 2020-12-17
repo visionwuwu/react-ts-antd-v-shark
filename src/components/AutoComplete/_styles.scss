@@ -1,0 +1,43 @@
+.vshark-auto-complete {
+    position: relative;
+    &-dropdown {
+        position: absolute;
+        left: 0;
+        top: calc(100% + 8px);
+        width: 100%;
+        padding-left: 0;
+        font-family: $auto-complete-font-family;
+        list-style: none;
+        box-shadow: $auto-complete-dropdown-box-shadow;
+    }
+    &-dropdown-item {
+        padding: $auto-complete-dropdown-item-padding-y $auto-complete-dropdown-item-padding-x;
+        color: $auto-complete-dropdown-item-color;
+        font-size: $auto-complete-font-size;
+        font-weight: $auto-complete-font-weight;
+        background-color: $white;
+        cursor: pointer;
+        transition: $auto-complete-transition;
+        &:hover {
+            color: $auto-complete-dropdown-item-active-color;
+        }
+        &.is-active {
+            color: $white;
+            background-color: $auto-complete-dropdown-item-active-color;
+            * {
+                color: inherit !important;
+            }
+        }
+    }
+    &-dropdown-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+        > svg {
+            font-size: $font-size-lg !important;
+            color: $gray-600 !important;
+        }
+    }
+}

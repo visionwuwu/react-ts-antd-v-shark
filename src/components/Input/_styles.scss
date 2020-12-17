@@ -1,0 +1,125 @@
+.vshark-input-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    font-family: $input-font-family;
+    font-size: $input-font-size;
+    font-weight: $input-font-weight;
+    >.vshark-input-affix-wrapper {
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        width: 100%;
+        padding: $input-padding-y $input-padding-x;
+        border: $input-border-width solid $input-border-color;
+        border-radius: $input-border-radius;
+        color: $input-font-color;
+        font-size: $input-font-size;
+        transition: $input-transition;
+        &:hover,
+        &-focused {
+            border-color: $input-border-active-color;
+            box-shadow: $input-box-shadow;
+        }
+        >.vshark-input-inner {
+            width: 100%;
+            outline: none;
+            border: none;
+            color: inherit;
+            font-size: inherit;
+            background-color: transparent;
+            &::placeholder {
+                color: lighten($input-font-color, 25%);
+            }
+        }
+        >.vshark-input-prefix,
+        >.vshark-input-suffix {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
+            > * {
+                font-size: inherit;
+                width: $input-font-size;
+                color: inherit !important;
+            }
+        }
+        >.vshark-input-prefix {
+            margin-right: 4px;
+        }
+        >.vshark-input-suffix {
+            margin-left: 4px;
+            .vshark-input-clear-icon {
+                position: relative;
+                margin-right: 4px;
+                font-size: 12px;
+                color: $gray-500 !important;
+                margin-top: -1px;
+                transition: color .3s;
+                cursor: pointer;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:hover {
+                    color: $gray-600 !important;
+                }
+            }
+        }
+    }
+    &.input-group {
+        >.vshark-input-affix-wrapper {
+            border-radius: 0;
+        }
+        >.vshark-input-group-prepend,
+        >.vshark-input-group-append {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: $input-padding-y $input-padding-x;
+            border: $input-border-width solid $input-border-color;
+            font-size: $input-font-size !important;
+            color: $input-font-color;
+            background: $input-disabled-color;
+            > svg {
+                color: inherit !important;
+                font-size: inherit !important;
+            }
+        }
+    }
+    &.input-group.input-group-prepend {
+        >.vshark-input-group-prepend {
+            border-right: 0;
+            border-top-left-radius: $input-border-radius;
+            border-bottom-left-radius: $input-border-radius;
+        }
+    }
+    &.input-group.input-group-append {
+        >.vshark-input-group-append {
+            border-left: 0;
+            border-top-right-radius: $input-border-radius;
+            border-bottom-right-radius: $input-border-radius;
+        }
+    }
+    &:disabled,
+    &.is-disabled {
+        .vshark-input-inner,
+        .vshark-input-affix-wrapper {
+            pointer-events: none;
+            background-color: $input-disabled-color;
+            cursor: not-allowed;
+            svg[class*=fa-] {
+                opacity: $input-disabled-opacity !important;
+            }
+        }
+    }
+}
+
+.input-size-sm {
+    @include input-size($input-padding-y-sm, $input-padding-x-sm, $input-font-size-sm, $input-border-radius-sm);
+}
+
+.input-size-lg {
+    @include input-size($input-padding-y-lg, $input-padding-x-lg, $input-font-size-lg, $input-border-radius-lg);
+}
+

@@ -1,0 +1,45 @@
+.vshark-progress-bar {
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.vshark-progress-bar-outer {
+    position: relative;
+    width: 100%;
+    background-color: $progress-bg;
+    border-radius: $progress-border-radius;
+    overflow: hidden;
+}
+
+.vshark-progress-bar-inner {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    transition: $progress-bar-transition;
+    &.linecap-round {
+        border-radius: $progress-border-radius;
+    }
+    &.linecap-square {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .inner-text {
+        color: $progress-bar-color;
+        font-size: $progress-font-size;
+        margin: 0 5px;  
+    }
+
+    @each $name, $color in $theme-colors {
+        &.color-#{$name} {
+            background-color: $color;
+        }
+    }
+}

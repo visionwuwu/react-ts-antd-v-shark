@@ -1,0 +1,158 @@
+.vshark-menu {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 30px;
+    list-style: none;
+    color: $gray-900;
+    border-bottom: $menu-border-width solid $menu-border-color;
+    box-shadow: $menu-box-shadow;
+    >.menu-item {
+        padding: $menu-item-padding-y $menu-item-padding-r $menu-item-padding-y $menu-item-padding-l;
+        margin-bottom: 0;
+        line-height: $line-height-base;
+        white-space: nowrap;
+        transition: $menu-transition;
+        cursor: pointer;
+        &.is-active,
+        &:hover {
+            color: $menu-item-active-color;
+            border-color: $menu-item-active-color;
+        }
+        &:disabled,
+        &.is-disabled {
+            color: $menu-item-disabled-color;
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+    .menu-item {
+        .menu-icon {
+            font-size: 14px;
+            min-width: 14px;
+            margin-right: 10px;
+            color: $gray-800 !important;
+            transition: color .15s ease-in-out;
+        }
+        &:hover,
+        &.is-active {
+            .menu-icon{
+                color: $menu-item-active-color !important;
+            }
+        }
+    }
+    .vshark-submenu {
+        padding-left: 0;
+        list-style: none;
+        margin: 0;
+        .menu-item {
+            padding: $menu-item-padding-y $menu-item-padding-r $menu-item-padding-y $menu-item-padding-l;
+            margin-bottom: 0;
+            color: $gray-900;
+            transition: $menu-transition;
+            cursor: pointer;
+            &.is-active,
+            &:hover {
+                color: $menu-item-active-color;
+            }
+            &:disabled,
+            &.is-disabled {
+                color: $menu-item-disabled-color;
+                pointer-events: none;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.menu-horizontal {
+    >.menu-item {
+        text-align: center;
+        border-bottom: $menu-item-active-border-width solid transparent;
+    }
+    .submenu-item {
+        position: relative;
+        box-sizing: border-box;
+        .submenu-title {
+            display: flex;
+            align-items: center;
+        }
+        .vshark-submenu {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 8px);
+            z-index: 1000;
+            border: 1px solid $gray-300;
+            background: $white;
+            box-shadow: $submenu-box-shadow;
+            .menu-item {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.menu-vertical {
+    flex-direction: column;
+    margin: 10px 20px;
+    border-bottom: none;
+    border-right: $menu-border-width solid $menu-border-color;
+    box-shadow: $menu-box-shadow;
+    >.menu-item {
+        text-align: left;
+        border-left: $menu-item-active-border-width solid transparent;
+    }
+    .submenu-item {
+        position: relative;
+        &.is-vertical {
+            &:after {
+                content: " ";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 2px;
+                height: 40px;
+                background: transparent;
+                transition: background-color .25s ease-in-out;
+            }
+            &.is-active,
+            &:hover {
+                border-left-color: transparent !important;
+                &:after {
+                    background: $menu-item-active-color;
+                }
+            }
+        }
+        .submenu-title {
+            position: relative;
+            display: flex;
+            align-items: center;
+            .submenu-arrow {
+                position: absolute;
+                top: 5px;
+                right: -19px;
+                width: 10px;
+                color: $gray-800 !important;
+                transition: transform .3s cubic-bezier(0.23, 1, 0.32, 1) 0.1s, color .15s ease-in-out;
+            }
+        }
+        &.is-active {
+            >.submenu-title {
+                >.submenu-arrow {
+                    transform: rotateX(180deg);
+                }
+            }
+        }
+        &:hover,
+        &.is-active {
+            >.submenu-title {
+                .submenu-arrow{
+                    color: $menu-item-active-color !important;
+                }
+            }
+        }
+        .vshark-submenu {
+            text-align: left;
+        }
+    }
+}

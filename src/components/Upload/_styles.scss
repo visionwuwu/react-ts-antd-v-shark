@@ -1,0 +1,94 @@
+.vshark-upload {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.vshark-upload-input {
+    display: inline-block;
+    >.vshark-file-input {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.vshark-upload-drag {
+    box-sizing: border-box;
+    width: 360px;
+    height: 180px;
+    padding: $font-size-base;
+    border: $border-width dashed $border-color;
+    border-radius: $border-radius;
+    font-size: $font-size-base;
+    background-color: $gray-100;
+    text-align: center;
+    transition: border-color .3s;
+    cursor: pointer;
+    &.is-active,
+    &:hover {
+        border-color: $primary;
+    }
+}
+
+.vshark-upload-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.vshark-upload-list-item {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 200px;
+    margin-top: 5px;
+    line-height: 1.8;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(.55,0,.1,1);
+    &:first-child {
+        margin-top: 10px;
+    }
+    svg {
+        font-size: 14px !important;
+    }
+    >.file-name {
+        margin-left: 5px;
+        margin-right: 40px;
+        svg {
+            margin-right: 8px;
+            color: $gray-500 !important;
+        }
+    }
+    >.file-name-error {
+        color: $danger;
+        svg {
+        color: $danger;
+        }
+    }
+    >.file-status {
+        position: absolute;
+        right: 5px;
+        top: 0;
+        line-height: inherit;
+    }
+    >.file-actions {
+        position: absolute;
+        display: none;
+        right: 7px;
+        top: 0;
+        line-height: inherit;
+        cursor: pointer;
+        > svg {
+            color: $gray-500 !important;
+        }
+    }
+    &:hover {
+        background-color: $gray-200;
+        >.file-status {
+            display: none;
+        }
+        >.file-actions {
+            display: block;
+        }
+    }
+}

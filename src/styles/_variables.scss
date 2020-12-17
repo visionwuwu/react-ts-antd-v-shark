@@ -1,0 +1,292 @@
+// 黑，灰，白
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #49505728 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+// 自然颜色变量（自然界存在的肉眼可见
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow:#ffc107 !default;
+$green: #28a745 !default;
+$blue: #007bff !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8;
+$purple: #6f42c1 !default;
+$indigo: #6610f2 !default;
+$pink: #e83e8c !default;
+
+// 品牌颜色变量
+// 主题颜色，与辅助色
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$info: $cyan !default;
+$light: $gray-400 !default;
+$dark: $gray-800 !default;
+$gray: $gray-600 !default;
+
+// 主题颜色的map集合
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "danger": $danger,
+    "info": $info,
+    "light": $light,
+    "dark": $dark
+) !default;
+
+/** 字体系统 Fonts font-size font-family font-weight line-height h1-h6 link body headings */
+// 无衬线字体
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// 等宽字体
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+// 字体大小
+$font-size-base: 1rem !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-root: null !default;
+
+// 字重
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: 900 !default;
+$font-weight-base: $font-weight-normal !default;
+
+// 行高
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+// 标题大小
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2.0 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// 链接
+$link-color: $primary !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-decoration: none !default;
+$link-hover-decoration: underline !default;
+
+// body
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
+$body-text-align: left !default;
+
+// Spacing
+$spacer: 1rem !default;
+
+// headings
+$headings-margin-bottom: $spacer / 2 !default;
+$headings-font-family: null !default;
+$headings-font-style: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
+
+// Paragraph
+$paragraph-margin-bottom: 1rem !default;
+
+// display
+$display1-weight:             300 !default;
+$display2-weight:             300 !default;
+$display3-weight:             300 !default;
+$display4-weight:             300 !default;
+$display-line-height:         $headings-line-height !default;
+
+// lead
+$lead-font-size:              $font-size-base * 1.25 !default;
+$lead-font-weight:            300 !default;
+
+// Inline text elements
+$small-font-size:             .875em !default;
+
+$sub-sup-font-size:           .75em !default;
+
+$text-muted:                  $gray-600 !default;
+
+// Abbreviations
+$initialism-font-size:        $small-font-size !default;
+
+// Blockquotes
+$blockquote-small-color:      $gray-600 !default;
+$blockquote-small-font-size:  $small-font-size !default;
+$blockquote-font-size:        $font-size-base * 1.25 !default;
+
+$hr-color:                    inherit !default;
+$hr-height:                   1px !default;
+$hr-opacity:                  .25 !default;
+
+$legend-margin-bottom:        .5rem !default;
+$legend-font-size:            1.5rem !default;
+$legend-font-weight:          null !default;
+ 
+$mark-padding:                .2em !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+$nested-kbd-font-weight:      $font-weight-bold !default;
+
+$list-inline-padding:         .5rem !default;
+
+$mark-bg:                     #fcf8e3 !default;
+
+$hr-margin-y:                 $spacer !default;
+
+// Code
+
+$code-font-size:                    $small-font-size !default;
+$code-color:                        $pink !default;
+$pre-color:                         null !default;
+
+// options 可配置选项
+$enable-pointer-cursor-for-buttons:           true !default;
+
+// 边框 和 border radius
+$border-width: 1px !default;
+$border-color: $gray-300 !default;
+
+$border-radius: 0.25rem !default;
+$border-radius-sm: 0.2rem !default;
+$border-radius-lg: 0.2rem !default;
+
+// 不同类型的 box shadow
+$box-shadow: 0.5rem 1rem rgba($black, 0.15) !default;
+$box-shadow-sm: 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow-lg: 1rem, 3rem rgba($black, 0.175) !default;
+$box-shadow-inset: inset 0 1px 2px rgba($black, .075) !default;
+
+// 按钮
+// 按钮基本属性
+$btn-font-family: inherit !default;
+$btn-font-weight: $font-weight-normal !default;
+$btn-padding-y: 0.375rem !default;
+$btn-padding-x: 0.75rem !default;
+$btn-font-size: $font-size-base !default;
+$btn-line-height: $line-height-base !default;
+
+// 不同大小的按钮属性
+$btn-padding-x-sm: 0.5rem !default;
+$btn-padding-y-sm: 0.25rem !default;
+$btn-font-size-sm: $font-size-sm !default;
+
+$btn-padding-x-lg: 1rem !default;
+$btn-padding-y-lg: 0.5rem !default;
+$btn-font-size-lg: $font-size-lg !default;
+
+// 按钮边框
+$btn-border-width: $border-width !default;
+
+// 按钮box-shadow
+$btn-box-shadow: inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+$btn-disabled-opacity: .65 !default;
+
+// link
+$btn-link-color: $link-color !default;
+$btn-link-hover-color: $link-hover-color !default;
+$btn-link-disabled-color: $gray-600 !default;
+
+// 按钮圆角
+$btn-radius: $border-radius !default;
+$btn-radius-sm: $border-radius-sm !default;
+$btn-radius-lg: $border-radius-lg !default;
+
+// 按钮过渡
+$btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+// Menu组件
+$menu-border-width: $border-width !default;
+$menu-border-color: $border-color !default;
+$menu-box-shadow: inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+$menu-transition: color .15s ease-in-out, border-color .15s ease-in-out !default;
+$menu-line-height: $line-height-base !default;
+
+// menu-item
+$menu-item-padding-x: 1.5rem !default;
+$menu-item-padding-l: 1rem;
+$menu-item-padding-r: 1.8rem;
+$menu-item-padding-y: .5rem !default;
+$menu-item-active-color: $primary !default;
+$menu-item-active-border-width: 2px !default;
+$menu-item-disabled-color: $gray-600 !default;
+
+// submenu
+$submenu-box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04) !default;
+
+// Input
+$input-font-family: inherit !default;
+$input-font-weight: $font-weight-base !default;
+$input-font-color: $gray-600 !default;
+$input-line-light: $line-height-base !default;
+$input-padding-x: 0.75rem !default;
+$input-padding-y: 0.375rem !default;
+
+// input-font-size
+$input-font-size: $font-size-base !default;
+$input-font-size-sm: $font-size-sm !default;
+$input-font-size-lg: $font-size-lg !default;
+
+// input-padding-*
+$input-padding-x-sm: 0.5rem !default;
+$input-padding-y-sm: 0.25rem !default;
+$input-padding-x-lg: 1rem !default;
+$input-padding-y-lg: 0.5rem !default;
+
+// input-border-radius
+$input-border-radius: $border-radius !default;
+$input-border-radius-sm: $border-radius-sm !default;
+$input-border-radius-lg: $border-radius-lg !default;
+
+// input-border
+$input-border-width: $border-width !default;
+$input-border-color: $border-color;
+$input-border-active-color: rgba($primary, .7) !default;
+$input-disabled-color: $gray-100 !default;
+$input-disabled-opacity: .65 !default;
+
+// input-box-shadow
+$input-box-shadow: 0 0 0 2px rgba($primary, 0.2) !default;
+
+// input-transition
+$input-transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out !default;
+
+// auto-complete
+$auto-complete-font-size: $font-size-base !default;
+$auto-complete-font-family: inherit !default;
+$auto-complete-font-weight: $font-weight-normal !default;
+$auto-complete-dropdown-item-padding-x: 1rem !default;
+$auto-complete-dropdown-item-padding-y: 0.5rem !default;
+$auto-complete-dropdown-item-color: $body-color;
+$auto-complete-dropdown-item-active-color: $primary;
+
+// auto-complete box-shadow
+$auto-complete-dropdown-box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04) !default;
+
+// auto-complete transition
+$auto-complete-transition: color .3s, background-color .3s;
+
+// Progress
+$progress-font-size: $font-size-base * .75 !default;
+$progress-bar-color: $white !default;
+$progress-bg: $gray-200 !default;
+$progress-border-radius: 100px !default;
+$progress-bar-transition: width 0.6s ease !default;

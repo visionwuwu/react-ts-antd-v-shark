@@ -1,0 +1,41 @@
+@mixin input-size(
+    $padding-y,
+    $padding-x,
+    $font-size,
+    $border-radius
+) {
+    >.vshark-input-affix-wrapper {
+        padding: $padding-y $padding-x;
+        font-size: $font-size;
+        border-radius: $border-radius;
+        >.vshark-input-prefix,
+        >.vshark-input-suffix {
+            > * {
+                font-size: $font-size;
+                width: $font-size;
+            }
+        }
+    }
+    &.input-group {
+        >.vshark-input-group-prepend,
+        >.vshark-input-group-append {
+            padding: $padding-y $padding-x;
+            border: $input-border-width solid $input-border-color;
+            font-size: $font-size;
+        }
+    }
+    &.input-group.input-group-prepend {
+        >.vshark-input-group-prepend {
+            border-right: 0;
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+        }
+    }
+    &.input-group.input-group-append {
+        >.vshark-input-group-append {
+            border-left: 0;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+        }
+    }
+}
