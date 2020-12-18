@@ -4,5 +4,14 @@ node_js:
 cache: 
   directories:
   - node_modules
-  env: 
-    - CI=true
+env: 
+  - CI=true
+#script: 
+#  - npm run build-storybook
+#deploy:
+#  provider: pages
+#  skip_cleanup: true
+#  github_token: $GITHUB_TOKEN
+#  local_dir: storybook-static
+#  on:
+#    branch: main
