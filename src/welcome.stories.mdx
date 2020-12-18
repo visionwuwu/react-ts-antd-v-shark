@@ -122,10 +122,12 @@ v-shark 是基于react + react hooks + TypeScript, 高仿antd的一个UI组件�
 
 - 🌈 提炼自企业级中后台产品的交互语言和视觉风格。
 - 📦 开箱即用的高质量 React 组件。
-- 🛡 使用 TypeScript 开发，提供完整的类型定义文件。
-- ⚙️ 全链路开发和设计工具体系。
-- 🌍 数十个国际化语言支持。
-- 🎨 深入每个细节的主题定制能力
+- 🧡 使用 TypeScript 开发，提供完整的类型定义文件。
+- ⛑️ 使用 react-testing-library 完成单元测试
+- 📚 使用 storybook 本地调试和生成文档页面
+- 🎨 使用第三方库扩充组件-(react-fontawesome, react-transition-group)
+- 🌹 样式（Sass）文件从零开始，掌握大型应用的 CSS 组织方法
+- 🎉 涉及全部流程，包括最后的 npm publish，husky提交发布前验证，travis CI/CD 集成，发布文档站点等
 
 <div className="subheading">版本</div>
 
@@ -153,6 +155,20 @@ import { Button } from "v-shark"
 
 ReactDOM.render(<Button btnType="primary">按钮</Button>, mountNode)
 ```
+
+<div className="subheading">如何贡献</div>
+
+1. Github：通过在Github上提交[Pull Request](https://github.com/visionwuwu/react-ts-antd-v-shark/pulls) 向我提出建议与BUG。
+2. Email: 2021664244@qq.com 联系我。
+3. 个人博客：[橙晨燕](http://visionwuwu.gitee.io/blog-ccy-gitee/)
+
+<div className="subheading">未来计划</div>
+未来需要完成的组件如下
+
+- 👊Alert 警告提示。用于展示需要关注的信息。支持，不同样式，添加描述，可关闭。
+- 👊Tabs 选项卡切换组件。提供平级的区域将大块内容进行收纳和展现，保持界面整洁。选项卡样式，卡片式页签，带图标页签。
+- 👊Select 下拉选择器。弹出一个下拉菜单给用户选择操作，用于代替原生的选择器，或者需要一个更优雅的多选器时。支持多选，禁用选择。
+
 
 <div className="subheading">相关技术文档</div>
 
@@ -183,6 +199,13 @@ ReactDOM.render(<Button btnType="primary">按钮</Button>, mountNode)
     <span>
       <strong>Sass 文档</strong>
       Sass 是世界上最成熟、稳定、强大的专业级 CSS 扩展语言。
+    </span>
+  </a>
+  <a className="link-item" href="https://discord.gg/UUt2PJb" target="_blank">
+    <img src={Colors} alt="comments" />
+    <span>
+      <strong>React Testing Library 文档</strong>
+      React测试库通过添加用于处理React组件的API，构建在DOM测试库之上
     </span>
   </a>
 </div>

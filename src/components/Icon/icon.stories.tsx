@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react"
+import React from "react"
 import { Story, Meta } from "@storybook/react/types-6-0"
 import { action } from "@storybook/addon-actions"
 import { Icon, IconProps, displayIcons } from "./icon"

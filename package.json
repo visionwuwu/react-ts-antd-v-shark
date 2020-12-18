@@ -1,5 +1,5 @@
 {
-  "name": "react-ts-antd-v-shark",
+  "name": "v-shark",
   "version": "0.1.0",
   "description": "高仿antd-design UI组件库v-shark",
   "author": "Visionwuwu",
@@ -19,6 +19,9 @@
   "files": [
     "dist"
   ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
@@ -33,7 +36,7 @@
   "scripts": {
     "start": "react-scripts start",
     "clean": "rimraf ./dist",
-    "build": "react-scripts build",
+    "build": "npm run build-ts && npm run build-css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",

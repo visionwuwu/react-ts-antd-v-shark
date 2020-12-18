@@ -64,8 +64,6 @@ export const Button: FC<ButtonProps> = (props) => {
         ...restProps
     } = props
 
-    console.log("displayName" in restProps)
-
     /**
      * 利用classnames拼接按钮组件class,包含基础class、用户自定义class、组件属性class
      */
