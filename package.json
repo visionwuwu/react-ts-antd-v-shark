@@ -1,6 +1,6 @@
 {
   "name": "v-shark",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "高仿antd-design UI组件库v-shark",
   "author": "Visionwuwu",
   "private": false,
@@ -12,7 +12,7 @@
     "v-shark",
     "Visionwuwu"
   ],
-  "homepage": "http://vikingship.xyz",
+  "homepage": "http://ui.vshark.visionwu.top",
   "repository": {
     "type": "git",
     "url": "https://github.com/visionwuwu/react-ts-antd-v-shark"
@@ -39,7 +39,7 @@
   "scripts": {
     "start": "react-scripts start",
     "clean": "rimraf ./dist",
-    "lint": "eslint --ext js,ts,tsx src --max-warnings 10",
+    "lint": "eslint --no-error-on-unmatched-pattern --ext js,ts,tsx src --max-warnings 10",
     "build": "npm run build-ts && npm run build-css",
     "test": "react-scripts test",
     "test:nowatch": "cross-env CI=true react-scripts test",

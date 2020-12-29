@@ -16,7 +16,8 @@ v-shark 是基于react + react hooks + TypeScript, 高仿antd的一个UI组件�
 
 ### 版本
 
-- 稳定版：<a href="https://www.npmjs.com/package/v-shark">npm v0.1.0</a>
+- 稳定版：<a href="https://www.npmjs.com/package/v-shark">npm v0.1.1</a>
+- 文档地址：<a href="http://ui.vshark.visionwu.top/">v-shark</a>
 
 <div className="subheading">安装</div>
 
